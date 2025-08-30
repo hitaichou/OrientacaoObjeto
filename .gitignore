@@ -1,0 +1,9 @@
+# Arquivo de endereços que você quer ignorar
+endereco_git.txt
+
+# Pasta de configurações do VS Code
+.vscode/
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
