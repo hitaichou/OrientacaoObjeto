@@ -30,11 +30,23 @@ class Game:
         print(f"Média do jogo {self.name}: {self.totalEvaluation / self.evaluators}")
 
 #Classe derivada (subclasse) - especializada
+#Herança é um conceito fundamental da programação orientada a objetos que permite
+# que uma classe (subclasse) herde atributos e métodos de outra classe (superclasse).
+# Isso promove a reutilização de código e a criação de hierarquias de classes.
 class SinglePlayerGame(Game):
     def __init__(self, name="", yearLaunch=0,note=0, storyLine=""):
         super().__init__(name, yearLaunch, multiplayer=False, note=note)
         self.storyLine = storyLine
     
+    #Exemplo de sobrescrita de método (overriding) ou polimorfismo
+    #Polimorfismo é a capacidade de um método se comportar de maneira diferente dependendo
+    # do objeto que o chama. No exemplo abaixo, o método technical_sheet é sobrescrito na
+    # classe SinglePlayerGame para incluir informações adicionais específicas dessa subclasse.
+    #Quando o método technical_sheet é chamado em um objeto da classe SinglePlayerGame, 
+    # ele exibe informações adicionais sobre a história do jogo, além das informações básicas
+    # fornecidas pela classe pai Game.
+    #Isso demonstra o conceito de polimorfismo, onde o mesmo método (technical_sheet) se
+    # comporta de maneira diferente dependendo do contexto (classe pai vs. subclasse).
     def technical_sheet(self):
         super().technical_sheet()
         print(f"Enredo: {self.storyLine}\n")
